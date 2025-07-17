@@ -1,7 +1,10 @@
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, HTTPException, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
 import duckdb
+import json
+import os
 from typing import Optional
+from datetime import datetime
 
 app = FastAPI()
 
@@ -51,4 +54,19 @@ async def get_rules(
 
     # Return as list of dicts for better JSON output
     result = [dict(zip(columns, row)) for row in rules]
-    return {"rules": result} 
+    return {"rules": result}
+
+@app.post("/feedback")
+async def feedback(req: Request):
+    data = await req.json()
+    rule_id, rating = data['rule_id'], data['rating']
+    # append to JSONL
+    os.makedirs('data', exist_ok=True)
+    with open('data/feedback.jsonl', 'a') as f:
+        json.dump({
+            "rule_id": rule_id,
+            "rating": rating,
+            "timestamp": datetime.now().isoformat()
+        }, f)
+        f.write('\n')
+    return {"status": "ok"} 

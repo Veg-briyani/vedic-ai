@@ -1,10 +1,20 @@
-<script>
-  import RulesList from './lib/RulesList.svelte';
+<script lang="ts">
+  import { onMount } from 'svelte';
+  import RuleCard from './lib/RuleCard.svelte';
+  import axios from 'axios';
+
+  let rules: any[] = [];
+
+  onMount(async () => {
+    const { data } = await axios.get('http://127.0.0.1:8000/rules');
+    rules = data.rules;
+  });
 </script>
 
-<main>
-  <RulesList />
-</main>
+<h1>Vedic AI Rules</h1>
+{#each rules as r (r.id)}
+  <RuleCard rule={r} />
+{/each}
 
 <style>
   .logo {
