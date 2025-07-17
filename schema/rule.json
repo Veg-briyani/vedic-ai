@@ -1,0 +1,91 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["id", "original_text", "conditions", "effects", "metadata"],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "original_text": {
+      "type": "string"
+    },
+    "conditions": {
+      "type": "object",
+      "properties": {
+        "logic_block": {
+          "type": "object",
+          "properties": {
+            "operator": {
+              "type": "string",
+              "enum": ["AND", "OR"]
+            },
+            "clauses": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "enum": ["planet_state"]
+                  },
+                  "planet": {
+                    "type": "string"
+                  },
+                  "house": {
+                    "type": "integer"
+                  },
+                  "planet_type": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "effects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["category", "description", "impact", "intensity", "probability"],
+        "properties": {
+          "category": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "impact": {
+            "type": "string",
+            "enum": ["Negative", "Positive"]
+          },
+          "intensity": {
+            "type": "string",
+            "enum": ["High", "Medium", "Low", "Likely"]
+          },
+          "probability": {
+            "type": "string",
+            "enum": ["Certain", "Likely", "Possible", "Conditional"]
+          },
+          "context": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["source_name", "confidence"],
+      "properties": {
+        "source_name": {
+          "type": "string"
+        },
+        "confidence": {
+          "type": "string",
+          "enum": ["High", "Medium", "Low"]
+        }
+      }
+    }
+  }
+}

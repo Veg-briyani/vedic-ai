@@ -1,0 +1,702 @@
+{
+    "rules": [
+        {
+            "id": "garga_hora_rule_001",
+            "original_text": "Jupiter in his own house along with Saturn and Mercury will bestow long life. Such native often will beget wealth.",
+            "conditions": {
+                "logic_block": {
+                    "operator": "AND",
+                    "clauses": [
+                        {
+                            "type": "planet_state",
+                            "planet": "Jupiter",
+                            "relation_to_sign": "Own_House"
+                        },
+                        {
+                            "type": "planet_conjunction",
+                            "planets": [
+                                "Jupiter",
+                                "Saturn",
+                                "Mercury"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "effects": [
+                {
+                    "category": "longevity",
+                    "description": "The native will have a long life.",
+                    "impact": "Positive",
+                    "intensity": "High",
+                    "probability": "Likely"
+                },
+                {
+                    "category": "wealth",
+                    "description": "The native will often beget wealth.",
+                    "impact": "Positive",
+                    "intensity": "Medium",
+                    "probability": "Likely"
+                }
+            ],
+            "tags": [
+                "Jupiter",
+                "Saturn",
+                "Mercury",
+                "own_house",
+                "conjunction",
+                "longevity",
+                "wealth"
+            ],
+            "metadata": {
+                "source": "Garga Hora",
+                "author": "Sage Gargacarya",
+                "stanza": "1"
+            }
+        },
+        {
+            "id": "garga_hora_rule_002",
+            "original_text": "Should Venus be in Pisces along with Jupiter and the Moon, the native will acquire kingly fortunes and will have many sons and family.",
+            "conditions": {
+                "logic_block": {
+                    "operator": "AND",
+                    "clauses": [
+                        {
+                            "type": "planet_state",
+                            "planet": "Venus",
+                            "sign": "Pisces"
+                        },
+                        {
+                            "type": "planet_conjunction",
+                            "planets": [
+                                "Venus",
+                                "Jupiter",
+                                "Moon"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "effects": [
+                {
+                    "category": "wealth",
+                    "description": "The native will acquire kingly fortunes.",
+                    "impact": "Positive",
+                    "intensity": "High",
+                    "probability": "Likely"
+                },
+                {
+                    "category": "family",
+                    "description": "The native will have many sons and family.",
+                    "impact": "Positive",
+                    "intensity": "High",
+                    "probability": "Likely"
+                }
+            ],
+            "tags": [
+                "Venus",
+                "Jupiter",
+                "Moon",
+                "Pisces",
+                "conjunction",
+                "wealth",
+                "status",
+                "family",
+                "children"
+            ],
+            "metadata": {
+                "source": "Garga Hora",
+                "author": "Sage Gargacarya",
+                "stanza": "2"
+            }
+        },
+        {
+            "id": "garga_hora_rule_003",
+            "original_text": "Should the Ascendant be in a malefic Rasi, while the Lord thereof occupies the 7th house and Jupiter is posited in the 8th along with the Sun, the child will die at the age of eight.",
+            "conditions": {
+                "logic_block": {
+                    "operator": "AND",
+                    "clauses": [
+                        {
+                            "type": "house_state",
+                            "house": 1,
+                            "sign_type": "Malefic"
+                        },
+                        {
+                            "type": "planet_state",
+                            "planet": {
+                                "selector": "lord_of_house",
+                                "house": 1
+                            },
+                            "house": 7
+                        },
+                        {
+                            "type": "planet_state",
+                            "planet": "Jupiter",
+                            "house": 8
+                        },
+                        {
+                            "type": "planet_conjunction",
+                            "planets": [
+                                "Jupiter",
+                                "Sun"
+                            ],
+                            "house": 8
+                        }
+                    ]
+                }
+            },
+            "effects": [
+                {
+                    "category": "longevity",
+                    "description": "The child will die at the age of eight.",
+                    "impact": "Negative",
+                    "intensity": "High",
+                    "probability": "Certain",
+                    "context": "Triggers at age 8"
+                }
+            ],
+            "tags": [
+                "Ascendant",
+                "malefic_sign",
+                "lord_of_house_1",
+                "house_7",
+                "Jupiter",
+                "Sun",
+                "house_8",
+                "conjunction",
+                "longevity",
+                "death"
+            ],
+            "metadata": {
+                "source": "Garga Hora",
+                "author": "Sage Gargacarya",
+                "stanza": "3"
+            }
+        },
+        {
+            "id": "garga_hora_rule_004",
+            "original_text": "If Mercury and Mars be together in the Ascendant, or 6th, or 8th, the native will either be a thief, or will indulge in awful acts. Such a person will have defect in his hands and legs.",
+            "conditions": {
+                "logic_block": {
+                    "operator": "AND",
+                    "clauses": [
+                        {
+                            "type": "planet_conjunction",
+                            "planets": [
+                                "Mercury",
+                                "Mars"
+                            ]
+                        },
+                        {
+                            "type": "logic_block",
+                            "operator": "OR",
+                            "clauses": [
+                                {
+                                    "type": "planet_state",
+                                    "planet": [
+                                        "Mercury",
+                                        "Mars"
+                                    ],
+                                    "house": 1
+                                },
+                                {
+                                    "type": "planet_state",
+                                    "planet": [
+                                        "Mercury",
+                                        "Mars"
+                                    ],
+                                    "house": 6
+                                },
+                                {
+                                    "type": "planet_state",
+                                    "planet": [
+                                        "Mercury",
+                                        "Mars"
+                                    ],
+                                    "house": 8
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "effects": [
+                {
+                    "category": "character",
+                    "description": "The native will either be a thief, or will indulge in awful acts.",
+                    "impact": "Negative",
+                    "intensity": "High",
+                    "probability": "Likely"
+                },
+                {
+                    "category": "health",
+                    "description": "The native will have a defect in his hands and legs.",
+                    "impact": "Negative",
+                    "intensity": "Medium",
+                    "probability": "Likely"
+                }
+            ],
+            "tags": [
+                "Mercury",
+                "Mars",
+                "conjunction",
+                "house_1",
+                "house_6",
+                "house_8",
+                "character",
+                "health",
+                "affliction"
+            ],
+            "metadata": {
+                "source": "Garga Hora",
+                "author": "Sage Gargacarya",
+                "stanza": "4"
+            }
+        },
+        {
+            "id": "garga_hora_rule_005",
+            "original_text": "Mercury in the Ascendant, or 6th, or 8th can cause death at the age of 4. Even if the native is dipped in nectar, it will be of no avail.",
+            "conditions": {
+                "logic_block": {
+                    "operator": "OR",
+                    "clauses": [
+                        {
+                            "type": "planet_state",
+                            "planet": "Mercury",
+                            "house": 1
+                        },
+                        {
+                            "type": "planet_state",
+                            "planet": "Mercury",
+                            "house": 6
+                        },
+                        {
+                            "type": "planet_state",
+                            "planet": "Mercury",
+                            "house": 8
+                        }
+                    ]
+                }
+            },
+            "effects": [
+                {
+                    "category": "longevity",
+                    "description": "Death at the age of 4.",
+                    "impact": "Negative",
+                    "intensity": "High",
+                    "probability": "Certain",
+                    "context": "Triggers at age 4"
+                }
+            ],
+            "tags": [
+                "Mercury",
+                "house_1",
+                "house_6",
+                "house_8",
+                "longevity",
+                "death"
+            ],
+            "metadata": {
+                "source": "Garga Hora",
+                "author": "Sage Gargacarya",
+                "stanza": "5"
+            }
+        },
+        {
+            "id": "garga_hora_rule_006",
+            "original_text": "Mars and Jupiter in exchange in Rasi will inflict death at the age of 12. Even though Lord Siva may desire to save the person, it is rare to escape death in such a Case.",
+            "conditions": {
+                "logic_block": {
+                    "operator": "AND",
+                    "clauses": [
+                        {
+                            "type": "parivartana_yoga",
+                            "planets": [
+                                "Mars",
+                                "Jupiter"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "effects": [
+                {
+                    "category": "longevity",
+                    "description": "Death at the age of 12.",
+                    "impact": "Negative",
+                    "intensity": "High",
+                    "probability": "Certain",
+                    "context": "Triggers at age 12"
+                }
+            ],
+            "tags": [
+                "Mars",
+                "Jupiter",
+                "exchange",
+                "parivartana",
+                "longevity",
+                "death"
+            ],
+            "metadata": {
+                "source": "Garga Hora",
+                "author": "Sage Gargacarya",
+                "stanza": "6"
+            }
+        },
+        {
+            "id": "garga_hora_rule_007",
+            "original_text": "Should Jupiter occupy a house of Mars identical with 2nd, 6th, or 8th from Lagna, this child doubtlessly will face death in its sixth year.",
+            "conditions": {
+                "logic_block": {
+                    "operator": "AND",
+                    "clauses": [
+                        {
+                            "type": "planet_state",
+                            "planet": "Jupiter",
+                            "sign": [
+                                "Aries",
+                                "Scorpio"
+                            ]
+                        },
+                        {
+                            "type": "logic_block",
+                            "operator": "OR",
+                            "clauses": [
+                                {
+                                    "type": "planet_state",
+                                    "planet": "Jupiter",
+                                    "house": 2
+                                },
+                                {
+                                    "type": "planet_state",
+                                    "planet": "Jupiter",
+                                    "house": 6
+                                },
+                                {
+                                    "type": "planet_state",
+                                    "planet": "Jupiter",
+                                    "house": 8
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "effects": [
+                {
+                    "category": "longevity",
+                    "description": "Death in the sixth year.",
+                    "impact": "Negative",
+                    "intensity": "High",
+                    "probability": "Certain",
+                    "context": "Triggers at age 6"
+                }
+            ],
+            "tags": [
+                "Jupiter",
+                "Mars_sign",
+                "Aries",
+                "Scorpio",
+                "house_2",
+                "house_6",
+                "house_8",
+                "longevity",
+                "death"
+            ],
+            "metadata": {
+                "source": "Garga Hora",
+                "author": "Sage Gargacarya",
+                "stanza": "7"
+            }
+        },
+        {
+            "id": "garga_hora_rule_008a",
+            "original_text": "If Rahu occupies the Ascendant at birth, while the Moon is in the 6th/9th, the child will die within 20 days of birth.",
+            "conditions": {
+                "logic_block": {
+                    "operator": "AND",
+                    "clauses": [
+                        {
+                            "type": "planet_state",
+                            "planet": "Rahu",
+                            "house": 1
+                        },
+                        {
+                            "type": "logic_block",
+                            "operator": "OR",
+                            "clauses": [
+                                {
+                                    "type": "planet_state",
+                                    "planet": "Moon",
+                                    "house": 6
+                                },
+                                {
+                                    "type": "planet_state",
+                                    "planet": "Moon",
+                                    "house": 9
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "effects": [
+                {
+                    "category": "longevity",
+                    "description": "The child will die within 20 days of birth.",
+                    "impact": "Negative",
+                    "intensity": "High",
+                    "probability": "Certain"
+                }
+            ],
+            "tags": [
+                "Rahu",
+                "Moon",
+                "house_1",
+                "house_6",
+                "house_9",
+                "longevity",
+                "death",
+                "balarishta"
+            ],
+            "metadata": {
+                "source": "Garga Hora",
+                "author": "Sage Gargacarya",
+                "stanza": "8"
+            }
+        },
+        {
+            "id": "garga_hora_rule_008b",
+            "original_text": "Similar effects will prevail, if Rahu is in the 4th from Lagna, while the Moon occupies one of the angles.",
+            "conditions": {
+                "logic_block": {
+                    "operator": "AND",
+                    "clauses": [
+                        {
+                            "type": "planet_state",
+                            "planet": "Rahu",
+                            "house": 4
+                        },
+                        {
+                            "type": "planet_state",
+                            "planet": "Moon",
+                            "house": [
+                                1,
+                                4,
+                                7,
+                                10
+                            ]
+                        }
+                    ]
+                }
+            },
+            "effects": [
+                {
+                    "category": "longevity",
+                    "description": "The child will die within 20 days of birth.",
+                    "impact": "Negative",
+                    "intensity": "High",
+                    "probability": "Certain"
+                }
+            ],
+            "tags": [
+                "Rahu",
+                "Moon",
+                "house_4",
+                "angle_house",
+                "kendra",
+                "longevity",
+                "death",
+                "balarishta"
+            ],
+            "metadata": {
+                "source": "Garga Hora",
+                "author": "Sage Gargacarya",
+                "stanza": "8"
+            }
+        },
+        {
+            "id": "garga_hora_rule_009",
+            "original_text": "Death will be inflicted by Rahu in the 7th from Lagna, while the Moon is in the Ascendant. Even nectar will not be useful to him and the death will come to pass in the 10th year of the child.",
+            "conditions": {
+                "logic_block": {
+                    "operator": "AND",
+                    "clauses": [
+                        {
+                            "type": "planet_state",
+                            "planet": "Rahu",
+                            "house": 7
+                        },
+                        {
+                            "type": "planet_state",
+                            "planet": "Moon",
+                            "house": 1
+                        }
+                    ]
+                }
+            },
+            "effects": [
+                {
+                    "category": "longevity",
+                    "description": "Death in the 10th year of the child.",
+                    "impact": "Negative",
+                    "intensity": "High",
+                    "probability": "Certain",
+                    "context": "Triggers at age 10"
+                }
+            ],
+            "tags": [
+                "Rahu",
+                "Moon",
+                "house_7",
+                "house_1",
+                "longevity",
+                "death"
+            ],
+            "metadata": {
+                "source": "Garga Hora",
+                "author": "Sage Gargacarya",
+                "stanza": "9"
+            }
+        },
+        {
+            "id": "garga_hora_rule_010",
+            "original_text": "If the Moon is in the 12th from Lagna, while malefics are in the 6th house, the native will be shortlived. He will suffer from stomachial disorders.",
+            "conditions": {
+                "logic_block": {
+                    "operator": "AND",
+                    "clauses": [
+                        {
+                            "type": "planet_state",
+                            "planet": "Moon",
+                            "house": 12
+                        },
+                        {
+                            "type": "planet_state",
+                            "planet_type": "Malefic",
+                            "house": 6
+                        }
+                    ]
+                }
+            },
+            "effects": [
+                {
+                    "category": "longevity",
+                    "description": "The native will be short-lived.",
+                    "impact": "Negative",
+                    "intensity": "High",
+                    "probability": "Likely"
+                },
+                {
+                    "category": "health",
+                    "description": "The native will suffer from stomachial disorders.",
+                    "impact": "Negative",
+                    "intensity": "Medium",
+                    "probability": "Likely"
+                }
+            ],
+            "tags": [
+                "Moon",
+                "malefics",
+                "house_12",
+                "house_6",
+                "longevity",
+                "health",
+                "stomach_disorder"
+            ],
+            "metadata": {
+                "source": "Garga Hora",
+                "author": "Sage Gargacarya",
+                "stanza": "10"
+            }
+        },
+        {
+            "id": "garga_hora_rule_011",
+            "original_text": "If Rahu occupies the 9th, or the 10th, the native will die at 16, though Indra, Lord of Lords, may try to protect him.",
+            "conditions": {
+                "logic_block": {
+                    "operator": "OR",
+                    "clauses": [
+                        {
+                            "type": "planet_state",
+                            "planet": "Rahu",
+                            "house": 9
+                        },
+                        {
+                            "type": "planet_state",
+                            "planet": "Rahu",
+                            "house": 10
+                        }
+                    ]
+                }
+            },
+            "effects": [
+                {
+                    "category": "longevity",
+                    "description": "The native will die at 16.",
+                    "impact": "Negative",
+                    "intensity": "High",
+                    "probability": "Certain",
+                    "context": "Triggers at age 16"
+                }
+            ],
+            "tags": [
+                "Rahu",
+                "house_9",
+                "house_10",
+                "longevity",
+                "death"
+            ],
+            "metadata": {
+                "source": "Garga Hora",
+                "author": "Sage Gargacarya",
+                "stanza": "11"
+            }
+        },
+        {
+            "id": "garga_hora_rule_012",
+            "original_text": "Death will come to pass at the age of 20, if Saturn and the Sun are in exchange Rasi.",
+            "conditions": {
+                "logic_block": {
+                    "operator": "AND",
+                    "clauses": [
+                        {
+                            "type": "parivartana_yoga",
+                            "planets": [
+                                "Saturn",
+                                "Sun"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "effects": [
+                {
+                    "category": "longevity",
+                    "description": "Death will come to pass at the age of 20.",
+                    "impact": "Negative",
+                    "intensity": "High",
+                    "probability": "Certain",
+                    "context": "Triggers at age 20"
+                }
+            ],
+            "tags": [
+                "Saturn",
+                "Sun",
+                "exchange",
+                "parivartana",
+                "longevity",
+                "death"
+            ],
+            "metadata": {
+                "source": "Garga Hora",
+                "author": "Sage Gargacarya",
+                "stanza": "12"
+            }
+        }
+    ],
+    "metadata": {
+        "source_name": "samplepdf1-20.txt"
+    }
+}
