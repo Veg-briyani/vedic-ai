@@ -1,0 +1,9 @@
+# Docker / venv noise
+__pycache__/
+*.pyc
+.env
+.venv/
+*.egg-info
+data/raw/
+data/ocr_out/
+*.log
